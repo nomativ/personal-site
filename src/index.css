@@ -12,11 +12,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root{
+#root {
   width: 100%;
   max-width: 940px;
-  margin: 64px auto 0px;
-  gap: 48;
+  margin: 64px auto 128px;
+}
+
+body {
+  margin-left: 1000px;
 }
 
 a {
