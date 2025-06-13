@@ -12,9 +12,9 @@ function App() {
           </div>
           <div className="w-[470px] p-3 bg-[#173253] rounded-[30px] flex-col justify-start items-start gap-4 inline-flex self-center">
             <div className="p-8 bg-[#d7e4f3] rounded-3xl border border-black flex-col justify-start items-start gap-6 flex overflow-hidden">
-              <div className="h-[85px] flex-col justify-start items-start gap-2 flex">
+              <div className="h-[85px] flex-col justify-start items-start flex">
                 <div className="text-black/50 text-2xl">Software and web design leader</div>
-                <div className="text-black/90 text-[40px] font-medium font-['Bricolage Grotesque']">10 years</div>
+                <div className="text-black/90 text-[40px] font-medium font-['Bricolage Grotesque']">10 years experience</div>
               </div>
               <div className="text-black text-base font-medium">I'm a designer based in Oregon with 10+ years of experience in designing and leading product design initiatives.</div>
               <div className="flex flex-row items-center gap-4">
