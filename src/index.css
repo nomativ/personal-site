@@ -12,12 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  width: 100%;
-  max-width: 940px;
-  margin: 64px auto 128px;
-}
-
 body {
   margin-left: 1000px;
 }
@@ -32,7 +26,6 @@ a:hover {
 }
 
 body {
-  padding-top: 64px;
   margin: 0;
   display: flex;
   min-width: 320px;
