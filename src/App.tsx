@@ -1,13 +1,23 @@
 import profilePic from './assets/profile-pic.png'
 import MtnBackground from './components/MtnBackground'
+import TextCarousel from './components/textCarousel'
 
 function App() {
+
+  const heroTexts = [
+    "Product",
+    "Design systems",
+    "Growth",
+    "UX and Architecture",
+    "Mobile"
+  ]
+
 
   return (
     <>
       <MtnBackground />
-      <main className="max-w-full mt-16 flex">
-        <div className="max-w-[900px] inline-flex flex-row gap-18 mx-auto items-center">
+      <main className="max-w-full mt-16 flex flex-col">
+        <div className="max-w-[900px] inline-flex md:flex-row sm:flex-col md:gap-18 sm:gap-8 mx-auto items-center">
           <div className="inline-flex flex-col items-center gap-6">
             <img src={profilePic} alt='Edgar Priday profile picture' className="w-67 h-67 rounded-[30px]" />
             <h1 className="text-2xl text-white min-w-fit">Edgar Priday</h1>
@@ -16,7 +26,7 @@ function App() {
             <div className="p-8 bg-[#d7e4f3] rounded-3xl border border-black flex-col justify-start items-start gap-6 flex overflow-hidden">
               <div className="h-[85px] flex-col justify-start items-start flex">
                 <div className="text-black/50 text-2xl">Product and web designer</div>
-                <div className="text-black/90 text-[40px] font-medium font-['Bricolage Grotesque']">10 years expertise</div>
+                <div className="text-black/90 text-[40px] font-medium">10 years expertise</div>
               </div>
               <div className="text-black text-base font-medium">I turn complex challenges into thoughtfully crafted, user-led solutions that feel natural, useful and accessible to everyone.</div>
               <div className="flex flex-row items-center gap-4">
@@ -26,6 +36,7 @@ function App() {
                 <a href="https://www.linkedin.com/in/edpriday/">LinkedIn</a>
                 <a href="mailto:toedgar@pm.me">Reach out</a>
               </div>
+              < TextCarousel slides={heroTexts} />
             </div>
             <div className="w-full inline-flex px-2 pb-1 justify-between">
               <div className="text-white text-base">Time zone: PST (UTC-7)</div>
@@ -34,7 +45,7 @@ function App() {
                 Available for work
               </div>
             </div>
-          </div>0
+          </div>
         </div>
       </main >
     </>
