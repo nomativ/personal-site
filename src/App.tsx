@@ -1,9 +1,11 @@
 import profilePic from './assets/profile-pic.png'
+import MtnBackground from './components/MtnBackground'
 
 function App() {
 
   return (
     <>
+      <MtnBackground />
       <main className="max-w-full mt-16 flex">
         <div className="max-w-[900px] inline-flex flex-row gap-18 mx-auto items-center">
           <div className="inline-flex flex-col items-center gap-6">
