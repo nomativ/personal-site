@@ -1,3 +1,5 @@
+import profilePic from './assets/profile-pic.png'
+
 function App() {
 
   return (
@@ -5,7 +7,7 @@ function App() {
       <main className="max-w-full mt-16 flex">
         <div className="max-w-[900px] inline-flex flex-row gap-18 mx-auto items-center">
           <div className="inline-flex flex-col items-center gap-6">
-            <img src='src/assets/profile-pic.png' alt='ímage alt' className="w-67 h-67 rounded-[30px]" />
+            <img src={profilePic} alt='Edgar Priday profile picture' className="w-67 h-67 rounded-[30px]" />
             <h1 className="text-2xl text-white min-w-fit">Edgar Priday</h1>
           </div>
           <div className="w-[470px] p-3 bg-[#173253] rounded-[30px] flex-col justify-start items-start gap-4 inline-flex self-center">
