@@ -1,6 +1,6 @@
 import profilePic from './assets/profile-pic.png'
 import MtnBackground from './components/MtnBackground'
-import TextCarousel from './components/textCarousel'
+import TextCarousel from './components/TextCarousel'
 
 function App() {
 
@@ -16,9 +16,9 @@ function App() {
   return (
     <>
       <MtnBackground />
-      <main className="max-w-full mt-16 flex flex-col">
-        <div className="max-w-[900px] inline-flex md:flex-row sm:flex-col md:gap-18 sm:gap-8 mx-auto items-center">
-          <div className="inline-flex flex-col items-center gap-6">
+      <main className="max-w-full mt-16">
+        <div className="max-w-[900px] flex md:flex-row flex-col md:gap-18 gap-8 mx-auto items-center">
+          <div className="flex flex-col items-center gap-6">
             <img src={profilePic} alt='Edgar Priday profile picture' className="w-67 h-67 rounded-[30px]" />
             <h1 className="text-2xl text-white min-w-fit">Edgar Priday</h1>
           </div>
