@@ -23,7 +23,7 @@ function App() {
             <span className="text-[40px] text-white min-w-fit">Edgar Priday</span>
           </div>
           <div className="md:w-[470px] md:mx-0 mx-2 p-3 bg-[#173253] rounded-[30px] flex-col justify-start items-start gap-4 inline-flex self-center">
-            <div className="p-8 bg-[#d7e4f3] rounded-3xl border border-black flex-col justify-start items-start gap-6 flex overflow-hidden">
+            <div className="md:p-8 p-6 bg-[#d7e4f3] rounded-3xl border border-black flex-col justify-start items-start gap-6 flex overflow-hidden">
               <div className="flex-col justify-start items-start flex">
                 <div className="text-black/50 text-2xl">Multidisciplinary</div>
                 <div className="text-black/90 md:text-[40px] text-[32px] font-medium leading-[40px]">Product designer</div>
