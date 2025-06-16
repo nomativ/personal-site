@@ -2,7 +2,7 @@ import bgImage from '../assets/bg-image.png'
 
 export default function MtnBackground() {
     return (
-        <div className="absolute top-0 left-0 -z-10 w-full overflow-visible">
+        <div className="absolute top-0 left-0 -z-11 w-full overflow-visible">
             <img
                 className="w-full opacity-90"
                 src={bgImage}
