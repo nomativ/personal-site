@@ -1,6 +1,8 @@
 import profilePic from './assets/profile-pic.png'
 import MtnBackground from './components/MtnBackground'
 import TextCarousel from './components/TextCarousel'
+import Button from './components/Button'
+import Link from './components/Link'
 
 function App() {
 
@@ -30,11 +32,9 @@ function App() {
               </div>
               <div className="text-black text-base font-medium">For the last <b>10 years</b>, I've turned complex challenges into thoughtfully crafted, user-led solutions that feel natural, useful and accessible to everyone.</div>
               <div className="flex flex-row items-center gap-4">
-                <a href="https://edgar-p.notion.site/" className="px-4 py-2 bg-gradient-to-b from-[#0f1825] to-[#0f1825] rounded-[999px] border border-white justify-center items-center gap-1 inline-flex">
-                  <span className="text-center text-[#cccccc] text-base font-medium leading-loose">Portfolio</span>
-                </a>
-                <a href="https://www.linkedin.com/in/edpriday/">LinkedIn</a>
-                <a href="mailto:toedgar@pm.me">Reach out</a>
+                <Button text="Portfolio" url="https://edgar-p.notion.site/"></Button>
+                <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/"></Link>
+                <Link text="Reach out" url="mailto:toedgar@pm.me"></Link>
               </div>
               < TextCarousel slides={heroTexts} />
             </div>
