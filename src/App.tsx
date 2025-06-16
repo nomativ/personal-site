@@ -31,7 +31,7 @@ function App() {
                 <div className="text-black/90 md:text-[40px] text-[32px] font-medium leading-[40px]">Product designer</div>
               </div>
               <div className="text-black text-base font-medium">For the last <b>10 years</b>, I've turned complex challenges into thoughtfully crafted, user-led solutions that feel natural, useful and accessible to everyone.</div>
-              <div className="flex flex-row items-center gap-4">
+              <div className="flex flex-row items-center">
                 <Button text="Portfolio" url="https://edgar-p.notion.site/"></Button>
                 <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/"></Link>
                 <Link text="Reach out" url="mailto:toedgar@pm.me"></Link>
