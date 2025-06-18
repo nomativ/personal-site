@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'
 import profilePic from './assets/profile-pic.png'
 import defiux from './assets/defiux.png'
 import functor from './assets/functor.png'
@@ -11,7 +12,6 @@ import ProjectCard from './components/ProjectCard'
 import KpiCard from './components/KpiCard'
 
 function App() {
-
   const heroTexts = [
     "Visual craft",
     "Design systems",
@@ -20,12 +20,28 @@ function App() {
     "Project leadership"
   ]
 
-
   return (
     <>
-      <MtnBackground />
-      <main className="max-w-[900px] md:mt-16 my-6 mx-auto gap-12 flex flex-col">
-        <div className="w-full flex md:flex-row flex-col md:gap-18 gap-8 items-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+      >
+        <MtnBackground />
+      </motion.div>
+
+      <motion.main
+        className="max-w-[900px] md:mt-16 my-6 mx-auto gap-12 flex flex-col"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.0, delay: 0.4 }}
+      >
+        <motion.div
+          className="w-full flex md:flex-row flex-col md:gap-18 gap-8 items-center md:my-12 my-0"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
           <div className="min-w-67 flex flex-col items-center gap-4">
             <div className="relative w-67 h-67 overflow-hidden rounded-4xl">
               <img
@@ -46,11 +62,6 @@ function App() {
               </div>
             </div>
             <span className="text-[40px] text-white min-w-full text-center">Edgar Priday</span>
-            <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
-            <div className='inline-flex w-fit gap-8 items-center'>
-              <KpiCard title='Experience' kpi='10 years'></KpiCard>
-              <KpiCard title='Designed for' kpi='500k+ MAUs'></KpiCard>
-            </div>
           </div>
           <div className="md:w-full md:mx-0 mx-2 p-3 bg-[#173253] rounded-[30px] shadow-[0px_8px_8px_-4px_rgba(0,0,0,0.15)] flex-col justify-start items-start gap-4 inline-flex">
             <div className="md:p-8 p-6 bg-[#d7e4f3] rounded-3xl shadow-[0px_8px_8px_-4px_rgba(0,0,0,0.15)] flex-col justify-start items-start gap-6 flex overflow-hidden">
@@ -60,7 +71,7 @@ function App() {
               </div>
               <div className="text-black text-base font-medium">For over <b>10 years</b>, I've turned complex product challenges into thoughtfully crafted solutions that look beautiful, feel natural, and are useful to everyone.</div>
               <div className="flex flex-row items-center">
-                <Button text="Portfolio" url="https://edgar-p.notion.site/"></Button>
+                <Button text="Resume/Portfolio" url="https://edgar-p.notion.site/"></Button>
                 <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/"></Link>
                 <Link text="Reach out" url="mailto:toedgar@pm.me"></Link>
               </div>
@@ -70,12 +81,17 @@ function App() {
               <div className="text-white md:text-base text-sm">Time zone: PST (UTC-7)</div>
               <div className="text-white md:text-base text-sm flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                Available for work
+                Available for hire
               </div>
             </div>
           </div>
-        </div>
-        <div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
           <h2 className='text-white font-semibold text-xl pb-6'>Case studies</h2>
           <div className='grid md:grid-cols-2 grid-cols-1 md:px-0 px-2 gap-8'>
             <ProjectCard image={gds} title='Refactoring a 100+ component design system' discipline='Design systems' url='https://edgar-p.notion.site/Refactoring-the-Graph-Design-System-1931795f3a0c800fa9b1ec6320553673'></ProjectCard>
@@ -83,13 +99,22 @@ function App() {
             <ProjectCard image={defiux} title='Improving DeFi UX' discipline='UX design' url='https://edgar-p.notion.site/Improving-DeFi-UX-2141795f3a0c8059adb4c72ec20a8678'></ProjectCard>
             <ProjectCard image={landing} title='Product landing page design' discipline='Growth design' url='https://edgar-p.notion.site/Product-Landing-page-design-1931795f3a0c8049be08cadf30fa2a03'></ProjectCard>
           </div>
+        </motion.div>
+
+        <div className='px-4'>
+          <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
+          <div className='w-full md:inline-flex items-center justify-between py-6'>
+            <div className='inline-flex w-fit gap-4 items-center md:pb-0 pb-4'>
+              <p className='text-white'>See more of my work and experience on my resume</p>
+              <Button text="View in Notion" url="https://edgar-p.notion.site/"></Button>
+            </div>
+            <div className='inline-flex w-fit gap-8 items-center'>
+              <KpiCard title='Experience' kpi='10 years'></KpiCard>
+              <KpiCard title='Designed for' kpi='500k+ MAUs'></KpiCard>
+            </div>
+          </div>
         </div>
-        <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
-        <div className="flex flex-row justify-center items-center gap-4 mb-4">
-          <p className='text-white'>See more of my work and experience on my resume</p>
-          <Button text="View in Notion" url="https://edgar-p.notion.site/"></Button>
-        </div>
-      </main>
+      </motion.main>
     </>
   )
 }
