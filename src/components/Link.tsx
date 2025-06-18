@@ -1,3 +1,5 @@
+import { ArrowRight } from 'lucide-react'
+
 interface LinkProps {
     text: string
     url?: string
@@ -13,9 +15,7 @@ const Link = ({ text, url, Arrow = true }: LinkProps) => {
             >
                 {text}
                 {Arrow && (
-                    <span className="md:inline-block hidden transition-transform duration-300 opacity-0 group-hover:translate-x-0.5 group-hover:opacity-100">
-                        →
-                    </span>
+                    <ArrowRight className="md:inline-block hidden transition-transform duration-300 opacity-0 group-hover:translate-x-0.5 group-hover:opacity-100 ml-1" size={14} />
                 )}
             </a>
         )
