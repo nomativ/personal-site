@@ -116,8 +116,8 @@ function App() {
           <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
           <div className='w-full inline-flex items-center justify-between py-6'>
             <Link text="See my resume" url="https://edgar-p.notion.site/"></Link>
-            <div className="text-white md:text-base text-sm opacity-0 md:opacity-1">Time zone: PST (UTC-7)</div>
-            <div className="text-white md:text-base text-sm flex items-center gap-2">
+            <div className="text-white md:text-base text-sm opacity-0 md:opacity-1 w-fit">Time zone: PST (UTC-7)</div>
+            <div className="text-white md:text-base text-sm flex items-center gap-2 w-fit">
               <div className="w-3 h-3 rounded-full bg-green-500"></div>Available for hire</div>
           </div>
         </div>
