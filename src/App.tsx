@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <motion.div
+      <motion.div id='background'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
@@ -30,14 +30,14 @@ function App() {
         <MtnBackground />
       </motion.div>
 
-      <motion.main
+      <motion.main id='content'
         className="max-w-[900px] mx-auto flex flex-col"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.0, delay: 0.4 }}
       >
-        <motion.div
-          className="h-screen max-w-[785px] flex flex-col items-center gap-24 justify-center"
+        <motion.div id='hero'
+          className="md:h-screen max-w-[785px] flex flex-col items-center gap-24 justify-center md:my-0 my-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -64,22 +64,24 @@ function App() {
               </div>
               <span className="text-[40px] tracking-tight text-white min-w-full text-center font-medium">Edgar Priday</span>
             </div>
-            <div className="md:w-full md:mx-0 mx-2 flex-col justify-start items-start gap-4 inline-flex">
+            <div className="md:w-full md:mx-0 mx-12 flex-col justify-start items-start gap-4 inline-flex">
               <div className="flex-col justify-start items-start gap-6 flex">
-                <div className="flex-col justify-start items-start flex">
-                  <div className="text-white/50 text-2xl">Multidisciplinary</div>
-                  <div className="text-white/90 md:text-[40px] text-[32px] font-semibold tracking-tight leading-[40px]">Product designer</div>
+                <div className="flex-col justify-start items-start flex w-full">
+                  <div className="text-white/50 text-2xl text-center md:text-left w-full">Multidisciplinary</div>
+                  <div className="text-white/90 md:text-[40px] text-[32px] font-semibold tracking-tight leading-[40px] text-center md:text-left w-full">Product designer</div>
                 </div>
                 <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
-                <div className='inline-flex w-fit gap-8 items-center'>
+                <div className='inline-flex md:w-fit gap-8 items-center justify-center md:justify-normal w-full'>
                   <KpiCard title='Experience' kpi='10 years'></KpiCard>
                   <KpiCard title='Designed for' kpi='500k+ MAUs'></KpiCard>
                 </div>
-                <div className="text-white text-base font-medium">For over <b>10 years</b>, I've turned complex product challenges into thoughtfully crafted solutions that look beautiful, feel natural, and are useful for everyone.</div>
-                <div className="flex flex-row items-center">
+                <div className="text-white text-base font-medium text-center md:text-left">For over <b>10 years</b>, I've turned complex product challenges into thoughtfully crafted solutions that look beautiful, feel natural, and are useful for everyone.</div>
+                <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center w-full">
                   <Button text="Resume/Portfolio" url="https://edgar-p.notion.site/"></Button>
-                  <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/"></Link>
-                  <Link text="Reach out" url="mailto:toedgar@pm.me"></Link>
+                  <div className='flex items-center gap-4 md:gap-0'>
+                    <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/"></Link>
+                    <Link text="Reach out" url="mailto:toedgar@pm.me"></Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -87,7 +89,7 @@ function App() {
           < TextCarousel slides={heroTexts} />
         </motion.div>
 
-        <motion.div
+        <motion.div id='case studies'
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
@@ -110,15 +112,13 @@ function App() {
           </div>
         </motion.div>
 
-        <div className='px-4 mt-24'>
+        <div id='footer' className='px-4 mt-24'>
           <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
-          <div className='w-full md:inline-flex items-center justify-between py-6'>
+          <div className='w-full inline-flex items-center justify-between py-6'>
             <Link text="See my resume" url="https://edgar-p.notion.site/"></Link>
-            <div className="inline-flex px-2 pb-1 gap-8">
-              <div className="text-white md:text-base text-sm">Time zone: PST (UTC-7)</div>
-              <div className="text-white md:text-base text-sm flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>Available for hire</div>
-            </div>
+            <div className="text-white md:text-base text-sm opacity-0 md:opacity-1">Time zone: PST (UTC-7)</div>
+            <div className="text-white md:text-base text-sm flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>Available for hire</div>
           </div>
         </div>
       </motion.main>
