@@ -32,9 +32,9 @@ const TextCarousel = ({ slides, duration = 3000 }: TextCarouselProps) => {
                 {tripleSlides.map((slide, index) => (
                     <div
                         key={index}
-                        className="flex justify-center flex-shrink-0 px-4"
+                        className="flex justify-center flex-shrink-0 px-6"
                     >
-                        <p className="text-md font-medium text-center whitespace-nowrap text-black/50">
+                        <p className="text-xl text-center whitespace-nowrap text-white/50">
                             {slide}
                         </p>
                     </div>
