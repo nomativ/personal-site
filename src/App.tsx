@@ -31,7 +31,7 @@ function App() {
       </motion.div>
 
       <motion.main id='content'
-        className="max-w-[900px] mx-auto flex flex-col"
+        className="md:max-w-[900px] mx-auto flex flex-col"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.0, delay: 0.4 }}
@@ -43,7 +43,7 @@ function App() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <div className='flex md:flex-row flex-col md:gap-24 gap-8 items-center'>
-            <div className="min-w-67 flex flex-col items-center gap-4">
+            <div className="md:min-w-67 w-full flex flex-col items-center gap-4">
               <div className="relative w-67 h-67 overflow-hidden rounded-4xl">
                 <img
                   src={profilePic}
@@ -96,7 +96,7 @@ function App() {
           className='relative'
         >
           <div
-            className="absolute -top-30 -left-20 w-200 h-50 rotate-45 mix-blend-hard-light rounded-full blur-[75px] origin-top-left"
+            className="absolute -top-30 -left-20 md:w-200 h-50 rotate-45 mix-blend-hard-light rounded-full blur-[75px] origin-top-left"
             style={{
               background: 'radial-gradient(ellipse 67.05% 179.10% at 16.58% 39.07%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%)',
               transform: 'translateZ(0)',
@@ -116,9 +116,9 @@ function App() {
           <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
           <div className='w-full inline-flex items-center justify-between py-6'>
             <Link text="See my resume" url="https://edgar-p.notion.site/"></Link>
-            <div className="text-white md:text-base text-sm opacity-0 md:opacity-1 w-fit">Time zone: PST (UTC-7)</div>
+            <div className="text-white md:text-base text-sm hidden md:opacity-1 w-fit">Time zone: PST (UTC-7)</div>
             <div className="text-white md:text-base text-sm flex items-center gap-2 w-fit">
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>Available for hire</div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>Immediately available for hire</div>
           </div>
         </div>
       </motion.main>
