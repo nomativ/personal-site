@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.7",
     "@tailwindcss/vite": "^4.0.7",
+    "@vercel/speed-insights": "^1.2.0",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.516.0",
     "motion": "^12.4.7",
