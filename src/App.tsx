@@ -86,14 +86,15 @@ function App() {
               </div>
             </div>
           </div>
-          < TextCarousel slides={heroTexts} />
+          <TextCarousel slides={heroTexts} />
         </motion.div>
 
         <motion.div id='case studies'
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className='relative'
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          className='relative mt-10'
         >
           <div
             className="absolute -top-30 -left-20 md:w-200 h-50 rotate-45 mix-blend-hard-light rounded-full blur-[75px] origin-top-left"
@@ -112,7 +113,12 @@ function App() {
           </div>
         </motion.div>
 
-        <div id='footer' className='px-4 mt-24'>
+        <motion.div id='footer'
+          className='px-4 mt-24'
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          viewport={{ once: true }}
+        >
           <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
           <div className='w-full inline-flex items-center justify-between py-6'>
             <Link text="See my resume" url="https://edgar-p.notion.site/"></Link>
@@ -120,7 +126,7 @@ function App() {
             <div className="text-white md:text-base text-sm flex items-center gap-2 w-fit">
               <div className="w-3 h-3 rounded-full bg-green-500"></div>Immediately available for hire</div>
           </div>
-        </div>
+        </motion.div>
       </motion.main>
     </>
   )
