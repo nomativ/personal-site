@@ -78,6 +78,7 @@ function App() {
                 <div className="text-white text-base font-medium text-center md:text-left">For over <b>10 years</b>, I've turned complex product challenges into thoughtfully crafted solutions that look beautiful, feel natural, and are useful for everyone.</div>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center w-full">
                   <Button text="Resume/Portfolio" url="https://edgar-p.notion.site/"></Button>
+                  <Button text="Resume/Portfolio"></Button>
                   <div className='flex items-center gap-4 md:gap-0'>
                     <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/"></Link>
                     <Link text="Reach out" url="mailto:toedgar@pm.me"></Link>
@@ -127,7 +128,7 @@ function App() {
               <div className="w-3 h-3 rounded-full bg-green-500"></div>Immediately available for hire</div>
           </div>
         </motion.div>
-      </motion.main>
+      </motion.main >
     </>
   )
 }

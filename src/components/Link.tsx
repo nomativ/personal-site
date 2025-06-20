@@ -11,7 +11,7 @@ const Link = ({ text, url, Arrow = true }: LinkProps) => {
         return (
             <a
                 href={url}
-                className={`inline-block text-[#646cff] md:ml-[16px] hover:text-[#535bf2] font-medium group focus:outline-none ${Arrow ? 'relative' : ''}`}
+                className={`inline-block text-[#646cff] md:ml-[16px] hover:text-[#535bf2] font-medium group focus:ring-1 focus:ring-[#535bf2] focus:rounded-xs outline-none ${Arrow ? 'relative' : ''}`}
             >
                 {text}
                 {Arrow && (
