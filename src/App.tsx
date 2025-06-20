@@ -5,6 +5,7 @@ import functor from './assets/functor.png'
 import gds from './assets/gds.png'
 import landing from './assets/landing.png'
 import MtnBackground from './components/MtnBackground'
+import WindowBlur from './components/WindowBlur'
 import TextCarousel from './components/TextCarousel'
 import Button from './components/Button'
 import Link from './components/Link'
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <>
+      <WindowBlur />
       <motion.div id='background'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
