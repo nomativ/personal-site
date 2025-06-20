@@ -42,7 +42,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <div className='flex md:flex-row flex-col md:gap-24 gap-8 items-center'>
+          <div className='flex md:flex-row flex-col md:gap-2 gap-8 items-center'>
             <div className="md:min-w-67 w-full flex flex-col items-center gap-4">
               <div className="relative w-67 h-67 overflow-hidden rounded-4xl">
                 <img
