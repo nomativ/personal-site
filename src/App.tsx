@@ -20,6 +20,11 @@ function App() {
     "Project leadership"
   ]
 
+  // Experience calculation
+  const startYear = 2012;
+  const currentYear = new Date().getFullYear();
+  const yearsExperience = currentYear - startYear;
+
   return (
     <>
       <motion.div id='background'
@@ -72,16 +77,15 @@ function App() {
                 </div>
                 <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
                 <div className='inline-flex md:w-fit gap-8 items-center justify-center md:justify-normal w-full'>
-                  <KpiCard title='Experience' kpi='10 years'></KpiCard>
-                  <KpiCard title='Designed for' kpi='500k+ MAUs'></KpiCard>
+                  <KpiCard title='Experience' kpi={yearsExperience + ' years'} />
+                  <KpiCard title='Designed for' kpi='500k+ MAUs' />
                 </div>
-                <div className="text-white text-base font-medium text-center md:text-left">For over <b>10 years</b>, I've turned complex product challenges into thoughtfully crafted solutions that look beautiful, feel natural, and are useful for everyone.</div>
+                <div className="text-white text-base font-medium text-center md:text-left">For <b>{yearsExperience} years</b>, I've turned complex product challenges into thoughtfully crafted solutions that look beautiful, feel natural, and are useful for everyone.</div>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center w-full">
-                  <Button text="Resume/Portfolio" url="https://edgar-p.notion.site/"></Button>
-                  <Button text="Resume/Portfolio"></Button>
+                  <Button text="Resume/Portfolio" url="https://edgar-p.notion.site/" />
                   <div className='flex items-center gap-4 md:gap-0'>
-                    <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/"></Link>
-                    <Link text="Reach out" url="mailto:toedgar@pm.me"></Link>
+                    <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/" />
+                    <Link text="Reach out" url="mailto:toedgar@pm.me" />
                   </div>
                 </div>
               </div>
@@ -107,10 +111,10 @@ function App() {
           />
           <h2 className='text-white font-medium text-4xl tracking-tight pb-12 text-center'>Work highlights</h2>
           <div className='grid md:grid-cols-2 grid-cols-1 md:px-0 px-2 gap-4'>
-            <ProjectCard image={gds} title='Refactoring a 100+ component design system' discipline='Design systems' url='https://edgar-p.notion.site/Refactoring-the-Graph-Design-System-1931795f3a0c800fa9b1ec6320553673'></ProjectCard>
-            <ProjectCard image={functor} title='Functor webapp and browser extension' discipline='0→1 design' url='https://edgar-p.notion.site/Functor-web-app-and-browser-extension-1931795f3a0c80cab6c5ca428f8f443f'></ProjectCard>
-            <ProjectCard image={defiux} title='Improving DeFi UX' discipline='UX design' url='https://edgar-p.notion.site/Improving-DeFi-UX-2141795f3a0c8059adb4c72ec20a8678'></ProjectCard>
-            <ProjectCard image={landing} title='Product landing page design' discipline='Growth design' url='https://edgar-p.notion.site/Product-Landing-page-design-1931795f3a0c8049be08cadf30fa2a03'></ProjectCard>
+            <ProjectCard image={gds} title='Refactoring a 100+ component design system' discipline='Design systems' url='https://edgar-p.notion.site/Refactoring-the-Graph-Design-System-1931795f3a0c800fa9b1ec6320553673' />
+            <ProjectCard image={functor} title='Functor webapp and browser extension' discipline='0→1 design' url='https://edgar-p.notion.site/Functor-web-app-and-browser-extension-1931795f3a0c80cab6c5ca428f8f443f' />
+            <ProjectCard image={defiux} title='Improving DeFi UX' discipline='UX design' url='https://edgar-p.notion.site/Improving-DeFi-UX-2141795f3a0c8059adb4c72ec20a8678' />
+            <ProjectCard image={landing} title='Product landing page design' discipline='Growth design' url='https://edgar-p.notion.site/Product-Landing-page-design-1931795f3a0c8049be08cadf30fa2a03' />
           </div>
         </motion.div>
 
@@ -122,7 +126,7 @@ function App() {
         >
           <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
           <div className='w-full inline-flex items-center justify-between py-6'>
-            <Link text="See my resume" url="https://edgar-p.notion.site/"></Link>
+            <Link text="See my resume" url="https://edgar-p.notion.site/" />
             <div className="text-white md:text-base text-sm hidden md:opacity-1 w-fit">Time zone: PST (UTC-7)</div>
             <div className="text-white md:text-base text-sm flex items-center gap-2 w-fit">
               <div className="w-3 h-3 rounded-full bg-green-500"></div>Immediately available for hire</div>
