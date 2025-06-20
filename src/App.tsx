@@ -121,7 +121,7 @@ function App() {
         </motion.div>
 
         <motion.div id='footer'
-          className='px-4 mt-24'
+          className='px-4 mt-24 z-21'
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 20 }}
           viewport={{ once: true }}
