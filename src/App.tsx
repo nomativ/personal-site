@@ -18,7 +18,8 @@ function App() {
     "Design systems",
     "Growth",
     "UX strategy",
-    "Project leadership"
+    "Project leadership",
+    "Product intelligence"
   ]
 
   // Experience calculation
@@ -82,7 +83,7 @@ function App() {
                   <KpiCard title='Experience' kpi={yearsExperience + ' years'} />
                   <KpiCard title='Designed for' kpi='500k+ MAUs' />
                 </div>
-                <div className="text-white text-base font-medium text-center md:text-left">For <b>{yearsExperience} years</b>, I've turned complex product challenges into thoughtfully crafted solutions that look beautiful, feel natural, and are useful for everyone.</div>
+                <div className="text-white text-base font-medium text-center md:text-left">Throughout my career, I've turned complex product challenges into thoughtfully crafted solutions that look beautiful, feel natural, and are useful for everyone.</div>
                 <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center w-full">
                   <Button text="Resume/Portfolio" url="https://edgar-p.notion.site/" />
                   <div className='flex items-center gap-4 md:gap-0'>
