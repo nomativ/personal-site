@@ -42,27 +42,37 @@ export default function Showcase() {
                         <img src={a} loading="lazy" alt="Vida screenshot 1" />
                     </motion.div>
                     <motion.div id='col-2' className='mt-25' variants={variants(0.9)} initial="hidden" animate={controls}>
-                        <img src={b} loading="lazy" alt="Vida screenshot 2" />
-                        <img src={c} loading="lazy" alt="Vida screenshot 3" />
+                        <div className="flex flex-col gap-2 md:gap-6">
+                            <img src={b} loading="lazy" alt="Vida screenshot 2" />
+                            <img src={c} loading="lazy" alt="Vida screenshot 3" />
+                        </div>
                     </motion.div>
                     <motion.div id='col-3' variants={variants(0.6)} initial="hidden" animate={controls}>
-                        <img src={d} loading="lazy" alt="Vida screenshot 4" />
-                        <img src={e} loading="lazy" alt="Vida screenshot 5" />
+                        <div className="flex flex-col gap-2 md:gap-6">
+                            <img src={d} loading="lazy" alt="Vida screenshot 4" />
+                            <img src={e} loading="lazy" alt="Vida screenshot 5" />
+                        </div>
                     </motion.div>
                     <motion.div id='col-4' className='mt-25' variants={variants(0.3)} initial="hidden" animate={controls}>
-                        <img src={primary} loading="lazy" alt="Vida screenshot 6" />
-                        <img src={gradients} loading="lazy" className="-mt-6" alt="Vida screenshot 7" />
+                        <div className="flex flex-col gap-2 md:gap-6">
+                            <img src={primary} loading="lazy" alt="Vida screenshot 6" />
+                            <img src={gradients} loading="lazy" className="-mt-6" alt="Vida screenshot 7" />
+                        </div>
                     </motion.div>
                     <motion.div id='col-5' variants={variants(0.6)} initial="hidden" animate={controls}>
-                        <img src={f} loading="lazy" alt="Vida screenshot 8" />
-                        <img src={g} loading="lazy" alt="Vida screenshot 9" />
+                        <div className="flex flex-col gap-2 md:gap-6">
+                            <img src={f} loading="lazy" alt="Vida screenshot 8" />
+                            <img src={g} loading="lazy" alt="Vida screenshot 9" />
+                        </div>
                     </motion.div>
                     <motion.div id='col-6' variants={variants(0.9)} initial="hidden" animate={controls}>
                         <img src={h} loading="lazy" alt="Vida screenshot 10" />
                     </motion.div>
                     <motion.div id='col-7' className='mt-25' variants={variants(1.2)} initial="hidden" animate={controls}>
-                        <img src={i} loading="lazy" alt="Vida screenshot 11" />
-                        <img src={j} loading="lazy" alt="Vida screenshot 12" />
+                        <div className="flex flex-col gap-2 md:gap-6">
+                            <img src={j} loading="lazy" alt="Vida screenshot 12" />
+                            <img src={i} loading="lazy" alt="Vida screenshot 11" />
+                        </div>
                     </motion.div>
                 </div>
             </div>
