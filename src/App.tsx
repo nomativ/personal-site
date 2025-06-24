@@ -11,6 +11,9 @@ import Button from './components/Button'
 import Link from './components/Link'
 import ProjectCard from './components/ProjectCard'
 import KpiCard from './components/KpiCard'
+import Divider from './components/Divider'
+import Showcase from './components/home/Showcase'
+
 
 function App() {
   const heroTexts = [
@@ -39,19 +42,19 @@ function App() {
       </motion.div>
 
       <motion.main id='content'
-        className="md:max-w-[900px] mx-auto flex flex-col"
+        className="mx-auto flex flex-col"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.0, delay: 0.4 }}
       >
         <motion.div id='hero'
-          className="md:h-screen max-w-[785px] flex flex-col items-center gap-24 justify-center md:my-0 my-8"
+          className="md:h-[75vh] max-w-[785px] flex flex-col items-center gap-24 justify-center md:my-0 my-8 mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <div className='flex md:flex-row flex-col md:gap-2 gap-8 items-center'>
-            <div className="md:min-w-67 w-full flex flex-col items-center gap-4">
+          <div className='flex md:flex-row flex-col md:gap-24 gap-8 items-center'>
+            <div className="md:min-w-67 w-fit flex flex-col items-center gap-4">
               <div className="relative w-67 h-67 overflow-hidden rounded-4xl">
                 <img
                   src={profilePic}
@@ -70,7 +73,7 @@ function App() {
                   />
                 </div>
               </div>
-              <span className="text-[40px] tracking-tight text-white min-w-full text-center font-medium">Edgar Priday</span>
+              <h1 className="title text-white min-w-full text-center">Edgar Priday</h1>
             </div>
             <div className="md:w-full md:mx-0 mx-12 flex-col justify-start items-start gap-4 inline-flex">
               <div className="flex-col justify-start items-start gap-6 flex">
@@ -78,7 +81,7 @@ function App() {
                   <div className="text-white/50 text-2xl text-center md:text-left w-full">Multidisciplinary</div>
                   <div className="text-white/90 md:text-[40px] text-[32px] font-semibold tracking-tight leading-[40px] text-center md:text-left w-full">Product designer</div>
                 </div>
-                <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
+                <Divider />
                 <div className='inline-flex md:w-fit gap-8 items-center justify-center md:justify-normal w-full'>
                   <KpiCard title='Experience' kpi={yearsExperience + ' years'} />
                   <KpiCard title='Designed for' kpi='500k+ MAUs' />
@@ -102,7 +105,7 @@ function App() {
           initial={{ opacity: 0, y: 50 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-          className='relative mt-10'
+          className='relative mt-10 mx-auto md:max-w-[900px]'
         >
           <div
             className="absolute -top-30 -left-20 md:w-200 h-50 rotate-45 mix-blend-hard-light rounded-full blur-[75px] origin-top-left"
@@ -112,7 +115,6 @@ function App() {
               willChange: 'transform'
             }}
           />
-          <h2 className='text-white font-medium text-4xl tracking-tight pb-12 text-center'>Work highlights</h2>
           <div className='grid md:grid-cols-2 grid-cols-1 md:px-0 px-2 gap-4'>
             <ProjectCard image={gds} title='Refactoring a 100+ component design system' discipline='Design systems' url='https://edgar-p.notion.site/Refactoring-the-Graph-Design-System-1931795f3a0c800fa9b1ec6320553673' />
             <ProjectCard image={functor} title='Functor webapp and browser extension' discipline='0→1 design' url='https://edgar-p.notion.site/Functor-web-app-and-browser-extension-1931795f3a0c80cab6c5ca428f8f443f' />
@@ -120,19 +122,23 @@ function App() {
             <ProjectCard image={landing} title='Product landing page design' discipline='Growth design' url='https://edgar-p.notion.site/Product-Landing-page-design-1931795f3a0c8049be08cadf30fa2a03' />
           </div>
         </motion.div>
-
+        <div id='showcase' className='gap-4 mt-20 mx-4'>
+          <h2 className='section-title text-white pb-12 text-center'>Showcase</h2>
+          <Showcase />
+        </div>
         <motion.div id='footer'
-          className='px-4 mt-24 z-21'
+          className='md:w-[900px] w-full mx-auto px-4 mt-24 z-21'
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 20 }}
           viewport={{ once: true }}
         >
           <div className="self-stretch h-0 outline-1 outline-offset-[-0.50px] outline-[#7E90D4]"></div>
           <div className='w-full inline-flex items-center justify-between py-6'>
-            <Link text="See my resume" url="https://edgar-p.notion.site/" />
-            <div className="text-white md:text-base text-sm hidden md:opacity-1 w-fit">Time zone: PST (UTC-7)</div>
-            <div className="text-white md:text-base text-sm flex items-center gap-2 w-fit">
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>Immediately available for hire</div>
+            <div className="text-white md:text-base text-sm">Time zone: PST (UTC-7)</div>
+            <div className="text-white md:text-base text-sm flex items-center gap-4 w-fit">
+              <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/" />
+              <Link text="See my resume" url="https://edgar-p.notion.site/" />
+            </div>
           </div>
         </motion.div>
       </motion.main >

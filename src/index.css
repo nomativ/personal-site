@@ -7,11 +7,37 @@
 
 :root {
   font-family: 'Manrope', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
   background-color: #0F1825;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@utility title {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility section-title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-medium);
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility body-large {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+}
+
+@utility body {
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+}
+
+@utility caption {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-medium);
+  letter-spacing: var(--tracking-tight);
 }
