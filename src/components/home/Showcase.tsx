@@ -1,6 +1,6 @@
 import Divider from '../Divider'
 import Button from '../Button'
-import { Component } from 'lucide-react';
+import { Figma } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 import { a, b, c, d, e, f, g, h, i, j, primary, gradients } from '../../assets/vida'
@@ -34,7 +34,7 @@ export default function Showcase() {
                     <div className='w-full hidden md:inline-block'>
                         <Divider />
                     </div>
-                    <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Component} iconBefore={true} />
+                    <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Figma} iconBefore={true} />
                 </div>
                 <p className='md:absolute top-32 body text-white/50 md:w-64 mt-4 md:mt-0'>End-to-end design for an end-user app that rewards fans for their loyalty to creators.</p>
                 <div ref={gridRef} className='grid grid-cols-7 h-full min-w-[800px] md:w-fit gap-2 md:gap-6 -ml-[50%] md:mx-auto mt-4 md:mt-0'>
