@@ -1,9 +1,9 @@
 import { motion } from 'motion/react'
-import profilePic from './assets/profile-pic.png'
-import defiux from './assets/defiux.png'
-import functor from './assets/functor.png'
-import gds from './assets/gds2.png'
-import landing from './assets/landing.png'
+import profilePic from './assets/home/profile-pic.png'
+import defiux from './assets/home/defiux.png'
+import functor from './assets/home/functor.png'
+import gds from './assets/home/gds2.png'
+import landing from './assets/home/landing.png'
 import MtnBackground from './components/MtnBackground'
 import WindowBlur from './components/WindowBlur'
 import TextCarousel from './components/TextCarousel'
@@ -90,7 +90,7 @@ function App() {
                 <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center w-full">
                   <Button text="Resume/Portfolio" url="https://edgar-p.notion.site/" />
                   <div className='flex items-center gap-4 md:gap-0'>
-                    <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/" />
+                    <Link text="LinkedIn" url="https://www.linkedin.com/in/edpriday/" newTab={true} />
                     <Link text="Reach out" url="mailto:toedgar@pm.me" />
                   </div>
                 </div>

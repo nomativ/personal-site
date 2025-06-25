@@ -2,9 +2,10 @@ import Divider from '../Divider'
 import Button from '../Button'
 import { Figma } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
-import { useRef, useEffect } from 'react';
-import { a, b, c, d, e, f, g, h, i, j, primary, gradients } from '../../assets/vida'
-import { a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1 } from '../../assets/motion-graphics'
+import { useRef, useEffect, useState } from 'react';
+import { a, b, c, d, e, f, g, h, i, j, primary, gradients } from '../../assets/home/vida'
+import { a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1 } from '../../assets/home/motion-graphics'
+import { betos_poster, cypher_mockup, degen_cafe, visual_design_bg, inboundjunction_slide } from '../../assets/home/showcase-group'
 import { useInView } from 'framer-motion';
 
 const motionGraphicsImages = [
@@ -30,6 +31,8 @@ export default function Showcase() {
     const motionGraphicsRef = useRef(null);
     const motionGraphicsInView = useInView(motionGraphicsRef, { once: true, margin: '-100px' });
     const motionGraphicsControls = useAnimation();
+
+    const [hovered, setHovered] = useState<number | null>(null);
 
     useEffect(() => {
         if (isInView) {
@@ -60,7 +63,7 @@ export default function Showcase() {
                     <div className='w-full hidden md:inline-block'>
                         <Divider />
                     </div>
-                    <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Figma} iconBefore={true} />
+                    <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Figma} iconBefore={true} newTab={true} />
                 </div>
                 <p className='md:absolute top-32 body text-white/50 md:w-64 mt-4 md:mt-0'>End-to-end design for an end-user app that rewards fans for their loyalty to creators.</p>
                 <div ref={gridRef} className='grid grid-cols-7 h-full min-w-[800px] md:w-fit gap-2 md:gap-6 -ml-[50%] md:mx-auto mt-4 md:mt-0'>
@@ -102,7 +105,7 @@ export default function Showcase() {
                     <div className='w-full hidden md:inline-block'>
                         <Divider />
                     </div>
-                    <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Figma} iconBefore={true} />
+                    <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Figma} iconBefore={true} newTab={true} />
                 </div>
                 <p className='md:absolute top-32 body text-white/50 md:w-93 mt-4 md:mt-0 z-2'>Simplifying complex technical products and concepts for growth and created a design language to scale our diagrams consistently.</p>
                 <div id='images' ref={motionGraphicsRef}>
@@ -116,7 +119,7 @@ export default function Showcase() {
                             animate={motionGraphicsControls}
                             variants={{
                                 hidden: { opacity: 0 },
-                                visible: { opacity: 1, transition: { duration: 0.7, delay: 0.5 + i * 0.20 } },
+                                visible: { opacity: 1, transition: { duration: 0.3, delay: 0.5 + i * 0.20 } },
                             }}
                         />
                     ))}
@@ -148,9 +151,58 @@ export default function Showcase() {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center w-full mt-6'>
-                <Button text='See my portfolio' url='https://www.notion.so/imaginary-minnow-e0c/2151795f3a0c80beb52af984a193f5a1?v=2151795f3a0c8005ad92000c2dfbf18e&source=copy_link' iconBefore={false} />
+            <div id='showcase-group' className='w-full flex flex-row gap-6'>
+                <div id="growth" className='w-full relative h-[625px] rounded-3xl bg-[#0A0E15] p-8 md:py-12 md:px-19 overflow-hidden'>
+                    <div className="absolute -translate-1/2 top-1/2 left-1/2 md:w-100 h-50 bg-[#BBCDF260] mix-blend-hard-light rounded-full blur-[150px]" />
+                    <div className='w-full inline-flex flex-row items-center md:gap-6 justify-between'>
+                        <div className='inline-flex flex-col min-w-fit'>
+                            <h3 className='body text-white/50'>Cypher</h3>
+                            <p className='body-large text-white'>Growth design</p>
+                        </div>
+                        <div className='w-full hidden md:inline-block'>
+                            <Divider />
+                        </div>
+                        <p className='min-w-fit body text-white/50'>End-user</p>
+                    </div>
+                    <img className='absolute top-40' src={cypher_mockup} />
+                </div>
+                <div
+                    id="visual-design"
+                    className='w-full relative h-[625px] rounded-3xl bg-[#0A0E15] p-8 md:py-12 md:px-19 overflow-hidden'
+                    style={{ backgroundImage: `url(${visual_design_bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                >
+                    <div className='w-full inline-flex flex-row items-center md:gap-6 justify-between'>
+                        <p className='min-w-fit body-large text-white'>Visual design</p>
+                        <div className='w-full hidden md:inline-block'>
+                            <Divider />
+                        </div>
+                        <Button text="Figma" url="https://www.figma.com/design/iOkvVkoeMim3L0E026JWgx/Visual-Design-Portfolio?node-id=0-1&p=f&t=cMRrN9aTdanYVpL2-11" icon={Figma} iconBefore={true} newTab={true} />
+                    </div>
+                    <div className='group'>
+                        <img
+                            src={inboundjunction_slide}
+                            className={`absolute w-120 left-5 transition-all duration-700 ${hovered !== null && hovered !== 0 ? 'opacity-40 blur-sm z-10' : 'opacity-100 blur-0'} ${hovered === 0 ? 'z-30 scale-105 shadow-2xl' : ''}`}
+                            onMouseEnter={() => setHovered(0)}
+                            onMouseLeave={() => setHovered(null)}
+                            style={{ cursor: 'pointer' }}
+                        />
+                        <img
+                            src={degen_cafe}
+                            className={`absolute w-120 top-65 left-50 transition-all duration-700 ${hovered !== null && hovered !== 1 ? 'opacity-40 blur-sm z-10' : 'opacity-100 blur-0'} ${hovered === 1 ? 'z-30 scale-105 shadow-2xl' : ''}`}
+                            onMouseEnter={() => setHovered(1)}
+                            onMouseLeave={() => setHovered(null)}
+                            style={{ cursor: 'pointer' }}
+                        />
+                        <img
+                            src={betos_poster}
+                            className={`absolute w-60 top-60 left-30 transition-all duration-700 ${hovered !== null && hovered !== 2 ? 'opacity-40 blur-sm z-10' : 'opacity-100 blur-0'} ${hovered === 2 ? 'z-30 scale-105 shadow-2xl' : ''}`}
+                            onMouseEnter={() => setHovered(2)}
+                            onMouseLeave={() => setHovered(null)}
+                            style={{ cursor: 'pointer' }}
+                        />
+                    </div>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
