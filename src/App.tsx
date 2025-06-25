@@ -79,7 +79,7 @@ function App() {
               <div className="flex-col justify-start items-start gap-6 flex">
                 <div className="flex-col justify-start items-start flex w-full">
                   <div className="text-white/50 text-2xl text-center md:text-left w-full">Multidisciplinary</div>
-                  <div className="text-white/90 md:text-[40px] text-[32px] font-semibold tracking-tight leading-[40px] text-center md:text-left w-full">Product designer</div>
+                  <div className="text-white/90 md:text-[40px] text-[32px] font-semibold tracking-tight leading-[40px] text-center md:text-left w-full">Product design leader</div>
                 </div>
                 <Divider />
                 <div className='inline-flex md:w-fit gap-8 items-center justify-center md:justify-normal w-full'>
@@ -100,6 +100,7 @@ function App() {
           <TextCarousel slides={heroTexts} />
         </motion.div>
 
+
         <motion.div id='case studies'
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 50 }}
@@ -107,6 +108,7 @@ function App() {
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
           className='relative mt-10 mx-auto md:max-w-[900px]'
         >
+          <h2 className='section-title text-white pb-12 text-center'>Case studies</h2>
           <div
             className="absolute -top-30 -left-20 md:w-200 h-50 rotate-45 mix-blend-hard-light rounded-full blur-[75px] origin-top-left"
             style={{
@@ -122,10 +124,16 @@ function App() {
             <ProjectCard image={landing} title='Product landing page design' discipline='Growth design' url='https://edgar-p.notion.site/Product-Landing-page-design-1931795f3a0c8049be08cadf30fa2a03' />
           </div>
         </motion.div>
-        <div id='showcase' className='gap-4 mt-20 mx-4'>
+        <motion.div id='showcase'
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          className='relative mt-10'
+        >
           <h2 className='section-title text-white pb-12 text-center'>Showcase</h2>
           <Showcase />
-        </div>
+        </motion.div>
         <motion.div id='footer'
           className='md:w-[900px] w-full mx-auto px-4 mt-24 z-21'
           whileInView={{ opacity: 1, y: 0 }}
