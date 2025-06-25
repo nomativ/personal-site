@@ -105,7 +105,7 @@ export default function Showcase() {
                     <div className='w-full hidden md:inline-block'>
                         <Divider />
                     </div>
-                    <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Figma} iconBefore={true} newTab={true} />
+                    <Button text="Figma" url="https://www.figma.com/design/agiCQoIsQshXRwvO66qOaq/CS-Artifact---Substreams-and-Product-Pages?m=auto&t=ZuynCu5NO4FiZnP4-6" icon={Figma} iconBefore={true} newTab={true} />
                 </div>
                 <p className='md:absolute top-32 body text-white/50 md:w-93 mt-4 md:mt-0 z-2'>Simplifying complex technical products and concepts for growth and created a design language to scale our diagrams consistently.</p>
                 <div id='images' ref={motionGraphicsRef}>
