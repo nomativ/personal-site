@@ -151,7 +151,7 @@ export default function Showcase() {
                     </div>
                 </div>
             </div>
-            <div id='showcase-group' className='w-full flex flex-row gap-6'>
+            <div id='showcase-group' className='w-full hidden md:flex flex-row gap-6'>
                 <div id="growth" className='w-full relative h-[625px] rounded-3xl bg-[#0A0E15] p-8 md:py-12 md:px-19 overflow-hidden'>
                     <div className="absolute -translate-1/2 top-1/2 left-1/2 md:w-100 h-50 bg-[#BBCDF260] mix-blend-hard-light rounded-full blur-[150px]" />
                     <div className='w-full inline-flex flex-row items-center md:gap-6 justify-between'>
