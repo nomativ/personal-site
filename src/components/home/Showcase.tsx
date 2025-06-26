@@ -52,7 +52,7 @@ export default function Showcase() {
     });
 
     return (
-        <div className='flex flex-col gap-6 relative max-w-[1440px] mx-auto md:px-0 px-2'>
+        <div className='flex flex-col gap-6 md:gap-24 relative max-w-[1280px] mx-auto md:px-0 px-2'>
             <div id="vida" className='relative h-[625px] rounded-3xl bg-[#0A0E15] p-8 md:py-12 md:px-19 overflow-hidden'>
                 <div className="absolute -translate-y-1/2 left-1/2 -translate-x-1/2 md:w-200 h-100 bg-[#BBCDF210] mix-blend-hard-light rounded-full blur-[150px]" />
                 <div className='w-full inline-flex flex-row items-center md:gap-6 justify-between'>
@@ -66,7 +66,7 @@ export default function Showcase() {
                     <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Figma} iconBefore={true} newTab={true} />
                 </div>
                 <p className='md:absolute top-32 body text-white/50 md:w-64 mt-4 md:mt-0'>End-to-end design for an end-user app that rewards fans for their loyalty to creators.</p>
-                <div ref={gridRef} className='grid grid-cols-7 h-full min-w-[800px] gap-2 md:gap-6 md:mx-auto justify-self-center md:justify-self-auto mt-4 md:mt-0'>
+                <div ref={gridRef} className='grid grid-cols-7 h-full min-w-[800px] gap-2 md:gap-4 md:mx-auto justify-self-center md:justify-self-auto mt-4 md:mt-0'>
                     <motion.div id='col-1' className='mt-50' variants={variants(1.2)} initial="hidden" animate={controls}>
                         <img src={a} alt="Vida screenshot 1" />
                     </motion.div>
