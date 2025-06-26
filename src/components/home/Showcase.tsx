@@ -151,7 +151,13 @@ export default function Showcase() {
                     </div>
                 </div>
             </div>
-            <div id='showcase-group' className='w-full flex flex-col md:flex-row gap-6'>
+            <motion.div id='showcase-group'
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+                className='w-full flex flex-col md:flex-row gap-6'
+            >
                 <div id="growth" className='w-full relative h-[425px] md:h-[625px] rounded-3xl bg-[#0A0E15] p-8 md:py-12 md:px-19 overflow-hidden'>
                     <div className="absolute -translate-1/2 top-1/2 left-1/2 md:w-100 h-50 bg-[#BBCDF260] mix-blend-hard-light rounded-full blur-[150px]" />
                     <div className='w-full inline-flex flex-row items-center md:gap-6 justify-between'>
@@ -202,7 +208,7 @@ export default function Showcase() {
                         />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div >
     )
 }
