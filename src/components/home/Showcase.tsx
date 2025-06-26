@@ -9,13 +9,13 @@ import { betos_poster, cypher_mockup, degen_cafe, visual_design_bg, inboundjunct
 import { useInView } from 'framer-motion';
 
 const motionGraphicsImages = [
-    { src: d1, className: 'absolute w-60 top-65 left-126', alt: 'data funnel' },
+    { src: d1, className: 'absolute w-60 top-50 md:top-65 -right-10 md:left-126', alt: 'data funnel' },
     { src: i1, className: 'absolute w-47 top-62 left-186', alt: 'app rescilience' },
-    { src: l1, className: 'absolute w-55 top-58 left-55', alt: 'block data' },
+    { src: l1, className: 'absolute w-55 bottom-5 md:top-58 -right-20 md:left-55', alt: 'block data' },
     { src: e1, className: 'absolute w-30 top-101 left-117', alt: 'delegator GRT value flow' },
-    { src: a1, className: 'absolute w-110 top-59 left-0', alt: 'substreams data flow' },
+    { src: a1, className: 'absolute w-110 md:top-59 top-50 left-0', alt: 'substreams data flow' },
     { src: j1, className: 'absolute w-183 top-80 left-145', alt: 'token api query types' },
-    { src: k1, className: 'absolute w-130 top-29 left-235', alt: 'response cursor' },
+    { src: k1, className: 'absolute w-130 -bottom-5 md:top-29 left-5 md:left-235', alt: 'response cursor' },
     { src: c1, className: 'absolute w-23 top-24 left-120', alt: 'broken data flow' },
     { src: f1, className: 'absolute w-23 top-20 left-149', alt: 'broken data flow app loading' },
     { src: g1, className: 'absolute w-23 top-24 left-177', alt: 'data flow restored app connected' },
@@ -66,7 +66,7 @@ export default function Showcase() {
                     <Button text="Figma" url="https://www.figma.com/design/trGUjPieKyKyKLyjST5kBe/Vida?node-id=1-2&p=f&t=Zq8ntsCsKXsTn7jd-11" icon={Figma} iconBefore={true} newTab={true} />
                 </div>
                 <p className='md:absolute top-32 body text-white/50 md:w-64 mt-4 md:mt-0'>End-to-end design for an end-user app that rewards fans for their loyalty to creators.</p>
-                <div ref={gridRef} className='grid grid-cols-7 h-full min-w-[800px] md:w-fit gap-2 md:gap-6 -ml-[50%] md:mx-auto mt-4 md:mt-0'>
+                <div ref={gridRef} className='grid grid-cols-7 h-full min-w-[800px] gap-2 md:gap-6 md:mx-auto justify-self-center md:justify-self-auto mt-4 md:mt-0'>
                     <motion.div id='col-1' className='mt-50' variants={variants(1.2)} initial="hidden" animate={controls}>
                         <img src={a} alt="Vida screenshot 1" />
                     </motion.div>
@@ -100,7 +100,7 @@ export default function Showcase() {
                 <div className='w-full inline-flex flex-row items-center md:gap-6 justify-between'>
                     <div className='inline-flex flex-col min-w-fit'>
                         <h3 className='body text-white/50'>The Graph</h3>
-                        <p className='body-large text-white'>Motion Graphics</p>
+                        <p className='body-large text-white'>Motion graphics</p>
                     </div>
                     <div className='w-full hidden md:inline-block'>
                         <Divider />
@@ -114,7 +114,7 @@ export default function Showcase() {
                             key={img.src}
                             src={img.src}
                             alt={img.alt}
-                            className={img.className}
+                            className={`${img.className}`}
                             initial="hidden"
                             animate={motionGraphicsControls}
                             variants={{
@@ -151,8 +151,8 @@ export default function Showcase() {
                     </div>
                 </div>
             </div>
-            <div id='showcase-group' className='w-full hidden md:flex flex-row gap-6'>
-                <div id="growth" className='w-full relative h-[625px] rounded-3xl bg-[#0A0E15] p-8 md:py-12 md:px-19 overflow-hidden'>
+            <div id='showcase-group' className='w-full flex flex-col md:flex-row gap-6'>
+                <div id="growth" className='w-full relative h-[425px] md:h-[625px] rounded-3xl bg-[#0A0E15] p-8 md:py-12 md:px-19 overflow-hidden'>
                     <div className="absolute -translate-1/2 top-1/2 left-1/2 md:w-100 h-50 bg-[#BBCDF260] mix-blend-hard-light rounded-full blur-[150px]" />
                     <div className='w-full inline-flex flex-row items-center md:gap-6 justify-between'>
                         <div className='inline-flex flex-col min-w-fit'>
@@ -164,7 +164,7 @@ export default function Showcase() {
                         </div>
                         <p className='min-w-fit body text-white/50'>End-user</p>
                     </div>
-                    <img className='absolute top-40' src={cypher_mockup} />
+                    <img className='absolute top-40 left-1/2 -translate-x-1/2' src={cypher_mockup} />
                 </div>
                 <div
                     id="visual-design"
@@ -181,7 +181,7 @@ export default function Showcase() {
                     <div className='group'>
                         <img
                             src={inboundjunction_slide}
-                            className={`absolute w-120 left-5 transition-all duration-700 ${hovered !== null && hovered !== 0 ? 'opacity-40 blur-sm z-10' : 'opacity-100 blur-0'} ${hovered === 0 ? 'z-30 scale-105 shadow-2xl' : ''}`}
+                            className={`absolute w-120 top-25 md:top-20 left-5 transition-all duration-700 ${hovered !== null && hovered !== 0 ? 'opacity-40 blur-sm z-10' : 'opacity-100 blur-0'} ${hovered === 0 ? 'z-30 scale-105 shadow-2xl' : ''}`}
                             onMouseEnter={() => setHovered(0)}
                             onMouseLeave={() => setHovered(null)}
                             style={{ cursor: 'pointer' }}
@@ -195,7 +195,7 @@ export default function Showcase() {
                         />
                         <img
                             src={betos_poster}
-                            className={`absolute w-60 top-60 left-30 transition-all duration-700 ${hovered !== null && hovered !== 2 ? 'opacity-40 blur-sm z-10' : 'opacity-100 blur-0'} ${hovered === 2 ? 'z-30 scale-105 shadow-2xl' : ''}`}
+                            className={`absolute w-60 top-60 left-10 md:left-30 transition-all duration-700 ${hovered !== null && hovered !== 2 ? 'opacity-40 blur-sm z-10' : 'opacity-100 blur-0'} ${hovered === 2 ? 'z-30 scale-105 shadow-2xl' : ''}`}
                             onMouseEnter={() => setHovered(2)}
                             onMouseLeave={() => setHovered(null)}
                             style={{ cursor: 'pointer' }}
