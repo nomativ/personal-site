@@ -14,9 +14,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@utility display {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-medium);
+  letter-spacing: var(--tracking-tight);
+}
+
 @utility title {
   font-size: 40px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   letter-spacing: var(--tracking-tight);
 }
 
